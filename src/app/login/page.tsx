@@ -1,5 +1,5 @@
 'use client'
-import SignInButton from '../components/sign-in-button'
+import SignButton from '../components/sign-in-button'
 
 export default function Login() {
   return (
@@ -7,7 +7,7 @@ export default function Login() {
       <h1 className="text-4xl text-white pb-5 font-bold font-serif">
         Block - Do
       </h1>
-      <SignInButton/>
+      <SignButton />
     </div>
   )
 }
