@@ -1,15 +1,13 @@
-import { GithubIcon } from '../components/icons'
+'use client'
+import SignInButton from '../components/sign-in-button'
 
 export default function Login() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-white dark:bg-gray-900">
-      <h1 className="text-4xl text-white pb-4 font-bold font-serif">
+      <h1 className="text-4xl text-white pb-5 font-bold font-serif">
         Block - Do
       </h1>
-      <button type="button" className="text-gray-200 ring ring-gray-500 shadow-xl bg-[#384049] hover:bg-[#24292F]/60 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center ">
-        <GithubIcon />
-        Sign in with Github
-      </button>
+      <SignInButton/>
     </div>
   )
 }
