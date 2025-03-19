@@ -2,24 +2,24 @@
 
 ## 🏗️ Fase 1: Configuración Inicial
 ### 🔹 1. Definir Requisitos
-- [ ] Establecer las funcionalidades principales del to-do list.
-- [ ] Diseñar el flujo de usuario y la interacción con el grid.
+- [x] Establecer las funcionalidades principales del to-do list.
+- [x] Diseñar el flujo de usuario y la interacción con el grid.
 - [ ] Decidir cómo se almacenarán los datos (LocalStorage, Firebase, Supabase, etc.).
-- [ ] Elegir las herramientas y tecnologías necesarias.
+- [x] Elegir las herramientas y tecnologías necesarias.
 
 ### 🔹 2. Configurar el Proyecto
-- [ ] Crear el proyecto con Next.js y TypeScript.
-- [ ] Configurar ESLint y Prettier para mantener el código limpio.
-- [ ] Configurar TailwindCSS para el diseño y estilos.
+- [x] Crear el proyecto con Next.js y TypeScript.
+- [x] Configurar ESLint y Prettier para mantener el código limpio.
+- [x] Configurar TailwindCSS para el diseño y estilos.
 
 ### 🔹 3. Instalar Dependencias y Definir su Uso
-- [ ] **Next.js** → Framework para React que permite un desarrollo rápido con SSR y SSG.
-- [ ] **TypeScript** → Tipado estático para mejorar la seguridad y mantenibilidad del código.
-- [ ] **TailwindCSS** → Framework de estilos para crear una interfaz atractiva y responsiva.
+- [x] **Next.js** → Framework para React que permite un desarrollo rápido con SSR y SSG.
+- [x] **TypeScript** → Tipado estático para mejorar la seguridad y mantenibilidad del código.
+- [x] **TailwindCSS** → Framework de estilos para crear una interfaz atractiva y responsiva.
 - [ ] **dnd-kit o react-beautiful-dnd** → Librerías para la funcionalidad de arrastrar y soltar tareas en el grid.
 - [ ] **zustand o redux** → Manejo del estado global para gestionar las tareas de manera eficiente.
 - [ ] **Framer Motion** → Animaciones fluidas para mejorar la experiencia de usuario.
-- [ ] **ESLint y Prettier** → Herramientas para mantener un código limpio y consistente.
+- [x] **ESLint** → Herramienta para mantener un código limpio y consistente.
 - [ ] **Firebase o Supabase (Opcional)** → Base de datos y autenticación si se desea persistencia en la nube.
 
 ---
@@ -66,11 +66,6 @@
 - [ ] Implementar pruebas unitarias y de integración con **Jest** o **Cypress**.
 - [ ] Optimizar la carga de componentes y mejorar el rendimiento.
 
-### 🔹 12. Desplegar el Proyecto
-- [ ] Subir el frontend a **Vercel**.
-- [ ] Desplegar backend en **Firebase, Supabase o Railway**.
-- [ ] Configurar un dominio personalizado si es necesario.
-
 ---
 
 ## 🎯 Extras y Futuras Mejoras
@@ -78,3 +73,11 @@
 - [ ] Implementar colaboración en tiempo real con **WebSockets o Firestore**.
 - [ ] Agregar notificaciones y recordatorios con **OneSignal o Firebase Cloud Messaging**.
 - [ ] Permitir personalización del grid y temas visuales.
+
+
+
+## Desarrollando...
+- [ ] Agregar funcionalidad y logica al boton de login
+- [ ] Redireccionar al / para ver la lista de cada usuario
+- [ ] Usar Supabase para el Auth con Github?
+- [ ] Hacer los componentes de cada Tarea y la ListaTareas
