@@ -79,5 +79,5 @@
 ## Desarrollando...
 - [ ] Agregar funcionalidad y logica al boton de login
 - [ ] Redireccionar al / para ver la lista de cada usuario
-- [ ] Usar Supabase para el Auth con Github?
+- [x] Usar Supabase para el Auth con Github?
 - [ ] Hacer los componentes de cada Tarea y la ListaTareas
