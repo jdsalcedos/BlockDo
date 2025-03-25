@@ -1,9 +1,11 @@
 'use client'
 
-import { useRouter } from "next/navigation";
+import { createClientComponentClient, type Session } from "@supabase/auth-helpers-nextjs";
 import Button from "./button";
 import { GithubIcon, SignOutIcon } from "./icons";
-import { createClientComponentClient, type Session } from "@supabase/auth-helpers-nextjs"
+import { useRouter } from "next/navigation";
+
+
 
 export default function SignButtonClient({ session }: { session: Session | null }) {
 
@@ -23,9 +25,8 @@ export default function SignButtonClient({ session }: { session: Session | null 
     await supabase.auth.signOut()
     router.refresh()
   }
-
   return (
-    <header className="flex flex-col items-center justify-center space-y-3">
+    <header>
       {
         session === null
           ? (
