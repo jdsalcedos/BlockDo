@@ -10,17 +10,17 @@ export default async function Home() {
   if (session === null) {
     redirect('/login')
   }
-  const { data } = await supabase.from('tasks').select()
+  // const { data } = await supabase.from('tasks').select()
 
   return (
     <div className="flex bg-gray-900 min-h-screen items-center justify-center py-2 text-gray-200 text-3xl ">
       <SignButtonServer />
       Dirijase a /login para ver los avances :D
-      <pre>
+      {/* <pre>
         {
           JSON.stringify(data, null, 2)
         }
-      </pre>
+      </pre> */}
     </div>
   );
 }
