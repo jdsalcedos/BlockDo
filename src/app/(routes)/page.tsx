@@ -1,7 +1,21 @@
-export default function Home() {
+import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
+import { cookies } from "next/headers";
+import { Database } from "../types/database";
+import { redirect } from "next/navigation";
+import { SignButtonServer } from "../components/sign-button-server";
+
+export default async function Home() {
+  const supabase = createServerComponentClient<Database>({ cookies });
+  const { data: { session } } = await supabase.auth.getSession();
+
+  if (session === null) {
+    redirect("/login");
+  }
+
   return (
-    <div className="flex bg-gray-900 min-h-screen items-center justify-center py-2 text-gray-200 text-3xl ">
-      Dirijase a /login para ver los avances :D
-    </div>
+    <>
+      <h1>Home</h1>
+      <SignButtonServer />
+    </>
   );
 }
