@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import "./globals.css"
-import { robotoMedium } from '../ui/fonts/fonts'
+import { robotoMedium } from '@/app/components/ui/fonts/roboto-fonts'
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -15,7 +15,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={robotoMedium.className}>{children}</body>
+      <body className={robotoMedium.className}>
+        {children}
+      </body>
     </html>
   )
 }

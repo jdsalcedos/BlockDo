@@ -81,3 +81,13 @@
 - [ ] Redireccionar al / para ver la lista de cada usuario
 - [x] Usar Supabase para el Auth con Github?
 - [ ] Hacer los componentes de cada Tarea y la ListaTareas
+- [ ] Hacer que el contenido se pueda escribir en markdown y leer la vista previa traducida
+- [ ] Dark mode
+- [ ] Vista de edicion de la tarea en superposicion del board
+
+### Correo
+- [ ] Inicio de sesion con correo 
+- [ ] Seleccion de imagen de avatar al registrarse con correo
+
+### Botones
+- [ ] Boton para crear una tarea (logica y ui) 
