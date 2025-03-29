@@ -1,7 +1,7 @@
 import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
-import { SignButtonServer } from "../components/sign-button-server";
+import { AuthSignInButtonServer } from "../components/auth-button-server";
 
 export default async function Home() {
   const supabase = createServerComponentClient({ cookies })
@@ -13,9 +13,13 @@ export default async function Home() {
   // const { data } = await supabase.from('tasks').select()
 
   return (
-    <div className="flex bg-gray-900 min-h-screen items-center justify-center py-2 text-gray-200 text-3xl ">
-      <SignButtonServer />
-      Dirijase a /login para ver los avances :D
+    <div className="flex flex-col bg-gray-900 min-h-screen items-center justify-center text-gray-200">
+
+      <h1 className="py-5 text-3xl ">
+        Acá iran las tareas del usuario con su respectivo grid
+      </h1>
+
+      <AuthSignInButtonServer />
       {/* <pre>
         {
           JSON.stringify(data, null, 2)

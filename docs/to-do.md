@@ -69,7 +69,7 @@
 ---
 
 ## 🎯 Extras y Futuras Mejoras
-- [ ] Agregar autenticación con **Firebase Auth** o **NextAuth.js**.
+- [x] Agregar autenticación con **Supabase**.
 - [ ] Implementar colaboración en tiempo real con **WebSockets o Firestore**.
 - [ ] Agregar notificaciones y recordatorios con **OneSignal o Firebase Cloud Messaging**.
 - [ ] Permitir personalización del grid y temas visuales.
@@ -77,7 +77,7 @@
 
 
 ## Desarrollando...
-- [ ] Agregar funcionalidad y logica al boton de login
+- [x] Agregar funcionalidad y logica al boton de login
 - [ ] Redireccionar al / para ver la lista de cada usuario
 - [x] Usar Supabase para el Auth con Github?
 - [ ] Hacer los componentes de cada Tarea y la ListaTareas
