@@ -7,7 +7,7 @@ import { useRouter } from "next/navigation";
 
 
 
-export default function SignButtonClient({ session }: { session: Session | null }) {
+export default function AuthSignInButtonClient({ session }: { session: Session | null }) {
 
   const supabase = createClientComponentClient()
   const router = useRouter()

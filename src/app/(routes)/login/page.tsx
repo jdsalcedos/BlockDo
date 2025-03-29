@@ -1,4 +1,4 @@
-import { SignButtonServer } from '@/app/components/sign-button-server'
+import { AuthSignInButtonServer } from '@/app/components/auth-button-server'
 
 export default function Login() {
   return (
@@ -6,7 +6,7 @@ export default function Login() {
       <h1 className="text-4xl text-white pb-5 ">
         Inicia Sesion en Block - Do
       </h1>
-      <SignButtonServer />
+      <AuthSignInButtonServer />
     </div>
   )
 }
