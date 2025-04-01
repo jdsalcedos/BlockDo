@@ -1,6 +1,6 @@
-import { createClientComponentClient } from "@supabase/auth-helpers-nextjs"
+import { createClient } from "@/app/utils/supabase/client"
 
-const supabase = createClientComponentClient()
+const supabase = createClient()
 
 export async function SignInWithGithub() {
   await supabase.auth.signInWithOAuth({

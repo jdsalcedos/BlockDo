@@ -1,11 +1,10 @@
-import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
-import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 import { AuthSignInButtonServer } from "@/app/components/auth/auth-button-server";
+import { createClient } from "../utils/supabase/server";
 
 export default async function Home() {
-  const supabase = createServerComponentClient({ cookies })
-  const { data: { session } } = await supabase.auth.getSession()
+  const supabase = createClient()
+  const { data: { session } } = await (await supabase).auth.getSession()
 
   if (session === null) {
     redirect('/login')
