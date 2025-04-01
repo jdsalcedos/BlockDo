@@ -3,8 +3,8 @@
 import { type Session } from "@supabase/auth-helpers-nextjs";
 import Button from "@/app/components/ui/button";
 import { GithubIcon, SignOutIcon } from "@/app/components/ui/icons";
-import { useRouter } from "next/navigation";
 import { SignInWithGithub, SignOut } from "@/app/services/auth/auth-actions";
+import { useRouter } from "next/navigation";
 
 export default function AuthSignInButtonClient({ session }: { session: Session | null }) {
 

@@ -7,6 +7,7 @@
 - *end_at*
 - user_id (FK con id del usuario que la crea)
 
+DONE
 ---
 ## Tasks CRUD (implementation)
 - Create

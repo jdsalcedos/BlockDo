@@ -2,15 +2,17 @@ import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 import { AuthSignInButtonServer } from "@/app/components/auth/auth-button-server";
+import { getSession } from "../services/auth/get-session";
 
 export default async function Home() {
   const supabase = createServerComponentClient({ cookies })
-  const { data: { session } } = await supabase.auth.getSession()
+  const session = await getSession()
 
   if (session === null) {
     redirect('/login')
   }
-  // const { data } = await supabase.from('tasks').select()
+
+  const { data } = await supabase.from('tasks').select()
 
   return (
     <div className="flex flex-col bg-gray-900 min-h-screen items-center justify-center text-gray-200">
@@ -20,11 +22,11 @@ export default async function Home() {
       </h1>
 
       <AuthSignInButtonServer />
-      {/* <pre>
+      <pre>
         {
           JSON.stringify(data, null, 2)
         }
-      </pre> */}
+      </pre>
     </div>
   );
 }
