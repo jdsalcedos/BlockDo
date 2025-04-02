@@ -7,6 +7,7 @@
 - *end_at*
 - user_id (FK con id del usuario que la crea)
 
+DONE
 ---
 ## Tasks CRUD (implementation)
 - Create
@@ -22,4 +23,8 @@
 ---
 ## Para tener en cuenta
 
-middleware.ts
+middleware.ts (asi ya este toca revisarlo)
+
+---
+## Diario 
+que unicamente las tareas de cada usuario sean las que se muestran en pantalla
