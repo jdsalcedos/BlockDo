@@ -1,5 +1,4 @@
 import { createClient } from "@/app/utils/supabase/client"
-import {redirect} from "next/navigation";
 
 const supabase = createClient()
 
