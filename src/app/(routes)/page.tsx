@@ -1,13 +1,13 @@
 import { redirect } from "next/navigation";
 import { AuthSignInButtonServer } from "@/app/components/auth/auth-button-server";
-import {createClient} from "@/app/utils/supabase/server";
+import { createClient } from "@/app/utils/supabase/server";
 
 export default async function Home() {
   const supabase = await createClient()
 
-  const { data: { session } } = await supabase.auth.getSession()
+  const { data: { user } } = await supabase.auth.getUser()
 
-  if (session === null) {
+  if (user === null) {
     redirect('/login')
   }
 
@@ -19,6 +19,7 @@ export default async function Home() {
       <h1 className="py-5 text-3xl ">
         Acá iran las tareas del usuario con su respectivo grid
       </h1>
+
       <AuthSignInButtonServer />
       /* <pre>
         {
