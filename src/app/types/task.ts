@@ -1,8 +1,8 @@
-export type Task = {
-  id: string;
-  title: string;
-  content: string;
-  created_at: string;
-  end_at: string | null;
-  user_id: string;
+import { type Database } from "../types/database";
+
+type TaskEntity = Database['public']['Tables']['tasks']['Row']
+type UserEntity = Database['public']['Tables']['users']['Row']
+
+export type Task = TaskEntity & {
+  user: UserEntity
 }
