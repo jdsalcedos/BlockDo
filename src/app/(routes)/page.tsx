@@ -1,6 +1,8 @@
 import { redirect } from "next/navigation";
 import { AuthSignInButtonServer } from "@/app/components/auth/auth-button-server";
 import { createClient } from "@/app/utils/supabase/server";
+import { getTaskData } from "../services/tasks/get-tasks";
+import TaskCard from "../components/task/task-card";
 
 export default async function Home() {
   const supabase = await createClient()
@@ -11,7 +13,8 @@ export default async function Home() {
     redirect('/login')
   }
 
-  const { data } = await supabase.from('tasks').select()
+  const tasks = await getTaskData()
+
 
   return (
     <div className="flex flex-col bg-gray-900 min-h-screen items-center justify-center text-gray-200">
@@ -21,11 +24,11 @@ export default async function Home() {
       </h1>
 
       <AuthSignInButtonServer />
-      /* <pre>
-        {
-          JSON.stringify(data, null, 2)
-        }
-      </pre> */
+      <div className="grid grid-cols-3 gap-4 p-4 space-x-3">
+        {tasks.map((task) => (
+          <TaskCard key={task.id} task={task} />
+        ))}
+      </div>
     </div>
   );
 }
