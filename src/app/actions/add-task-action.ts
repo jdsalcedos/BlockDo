@@ -19,12 +19,15 @@ export async function addTask(formData: FormData) {
 
   if (user === null) return
 
-  await supabase.from('tasks').insert({
-    title: title,
-    content: content,
-    end_at: end_at,
-    user_id: user.id,
-  })
+  await supabase
+    .from('tasks')
+    .insert({
+      title: title,
+      content: content,
+      end_at: end_at,
+      user_id: user.id,
+    })
 
   revalidatePath('/')
+
 }
