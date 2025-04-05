@@ -2,6 +2,7 @@
 
 import { addTask } from "@/app/actions/add-task-action"
 import { useRef } from "react"
+import { TaskComposerButton } from "./post-task-button"
 
 export default function TaskComposer() {
 
@@ -29,12 +30,15 @@ export default function TaskComposer() {
           className="w-full text-xl bg-black placeholder-gray-500 p-2"
           placeholder="Que esta pasando?"
         ></textarea>
-        <button
-          type="submit"
-          className="bg-sky-500 text-sm disabled:opacity-40 disabled:pointer-events-none font-bold rounded-full px-5 py-2 self-end"
-        >
-          Postear
-        </button>
+        <div>
+          <p className="pt-1.5 text-gray-200">Fecha limite (opcional)</p>
+          <input
+            type="date"
+            name='end_at'
+            className="p-5 w-full "
+          />
+        </div>
+        <TaskComposerButton />
       </div>
     </form>
   )
