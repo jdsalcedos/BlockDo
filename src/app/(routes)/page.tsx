@@ -13,8 +13,7 @@ export default async function Home() {
   }
 
   return (
-    <div className="flex flex-col bg-gray-900 min-h-screen items-center justify-center text-gray-200">
-
+    <div className="flex flex-col min-h-screen items-center justify-center">
       <h1 className="py-5 text-3xl ">
         Acá iran las tareas del usuario con su respectivo grid
       </h1>
