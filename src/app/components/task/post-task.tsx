@@ -7,15 +7,22 @@ export default function TaskComposer() {
 
   const formRef = useRef<HTMLFormElement>(null)
 
-  const handleSubmit = async (formData: FormData): Promise<void> => {
-    console.log('submit')
-    await addTask(formData);
-  };
-
   return (
     <form ref={formRef}
-      action={handleSubmit} className='flex flex-row p-3 border-b border-white/20'>
+      action={async (formData) => {
+        await addTask(formData)
+        formRef.current?.reset() // Reset the form after submission
+      }}
+      className='flex flex-row p-3 border-b border-white/20'
+    >
+
       <div className='flex flex-1 flex-col gap-y-4'>
+        <textarea
+          name='title'
+          rows={1}
+          className="w-full text-2xl bg-black placeholder-gray-500 p-2"
+          placeholder="Titulo"
+        ></textarea>
         <textarea
           name='content'
           rows={4}

@@ -2,6 +2,7 @@
 
 import { revalidatePath } from "next/cache"
 import { createClient } from "../utils/supabase/server"
+import { getUser } from "../services/auth/get-user"
 
 export async function addTask(formData: FormData) {
   'use server'
@@ -10,25 +11,20 @@ export async function addTask(formData: FormData) {
   const title = formData.get('title')
   const end_at = formData.get('end_at')
 
-  console.log('content', content)
-
   if (content === null) return
 
   const supabase = await createClient()
 
-  const { data: { user } } = await supabase.auth.getUser()
+  const user = await getUser()
 
-  if (!user) return
+  if (user === null) return
 
-  // await supabase.from('tasks').insert({
-  //   title: title,
-  //   content: content,
-  //   end_at: end_at,
-  //   user_id: user.id,
-  // })
-
-  console.log(user)
+  await supabase.from('tasks').insert({
+    title: title,
+    content: content,
+    end_at: end_at,
+    user_id: user.id,
+  })
 
   revalidatePath('/')
-
 }
