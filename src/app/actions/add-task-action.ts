@@ -11,8 +11,6 @@ export async function addTask(formData: FormData) {
   const title = formData.get('title')
   const end_at = formData.get('end_at')
 
-  if (content === null) return
-
   const supabase = await createClient()
 
   const user = await getUser()
@@ -29,5 +27,4 @@ export async function addTask(formData: FormData) {
     })
 
   revalidatePath('/')
-
 }

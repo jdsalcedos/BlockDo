@@ -1,4 +1,7 @@
+'use client'
+
 import { type Task } from "@/app/types/task";
+import DeleteTaskButton from "./delete-task-button";
 
 export default function TaskCard({ task }: { task: Task }) {
   return (
@@ -10,7 +13,7 @@ export default function TaskCard({ task }: { task: Task }) {
         <p>{task.end_at}</p>
         <p>{task.user_id}</p>
       </div>
-
+      <DeleteTaskButton task={task} />
     </div>
   )
 }
