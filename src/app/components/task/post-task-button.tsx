@@ -2,7 +2,7 @@
 
 import { useFormStatus } from "react-dom"
 
-export function TaskComposerButton() {
+export function PostTaskButton() {
 
   const { pending } = useFormStatus()
   return (

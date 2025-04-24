@@ -2,7 +2,7 @@
 
 import { addTask } from "@/app/actions/add-task-action"
 import { useRef } from "react"
-import { TaskComposerButton } from "./post-task-button"
+import { PostTaskButton } from "./post-task-button"
 
 export default function TaskComposer() {
 
@@ -38,7 +38,7 @@ export default function TaskComposer() {
             className="p-5 w-full "
           />
         </div>
-        <TaskComposerButton />
+        <PostTaskButton />
       </div>
     </form>
   )

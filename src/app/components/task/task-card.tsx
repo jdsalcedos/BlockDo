@@ -1,9 +1,13 @@
 'use client'
 
+import { useState } from "react";
 import { type Task } from "@/app/types/task";
 import DeleteTaskButton from "./delete-task-button";
+import EditTaskModal from "./edit-task-modal";
 
 export default function TaskCard({ task }: { task: Task }) {
+  const [isEditing, setIsEditing] = useState(false);
+
   return (
     <div className="flex flex-col bg-gray-800 p-4 rounded-lg shadow-md text-gray-200">
       <h3>{task.title}</h3>
@@ -13,7 +17,18 @@ export default function TaskCard({ task }: { task: Task }) {
         <p>{task.end_at}</p>
         <p>{task.user_id}</p>
       </div>
-      <DeleteTaskButton task={task} />
+      <div className="flex gap-2 mt-4">
+        <button
+          onClick={() => setIsEditing(true)}
+          className="bg-blue-500 px-4 py-2 rounded hover:bg-blue-600"
+        >
+          Editar
+        </button>
+        <DeleteTaskButton task={task} />
+      </div>
+      {isEditing && (
+        <EditTaskModal task={task} onClose={() => setIsEditing(false)} />
+      )}
     </div>
-  )
+  );
 }
