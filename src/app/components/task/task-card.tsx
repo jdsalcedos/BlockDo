@@ -26,6 +26,7 @@ export default function TaskCard({ task }: { task: Task }) {
         </button>
         <DeleteTaskButton task={task} />
       </div>
+      {/* solo se renderiza el modal si isEditing es true */}
       {isEditing && (
         <EditTaskModal task={task} onClose={() => setIsEditing(false)} />
       )}
