@@ -9,15 +9,18 @@ export async function addTask(formData: FormData) {
 
   const content = formData.get('content')
   const title = formData.get('title')
-  const end_at = formData.get('end_at')
+  const end_at = formData.get('end_at') || null;
 
   const supabase = await createClient()
 
   const user = await getUser()
 
-  if (user === null) return
+  if (user === null) {
+    console.log('El usuario no está autenticado.')
+    return
+  }
 
-  await supabase
+  const { error } = await supabase
     .from('tasks')
     .insert({
       title: title,
@@ -25,6 +28,11 @@ export async function addTask(formData: FormData) {
       end_at: end_at,
       user_id: user.id,
     })
+
+  if (error) {
+    console.error('Error al insertar en Supabase:', error)
+    return
+  }
 
   revalidatePath('/')
 }

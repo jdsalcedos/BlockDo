@@ -1,22 +1,24 @@
 'use client'
 
-import { addTask } from "@/app/actions/add-task-action"
+
 import { useRef } from "react"
 import { PostTaskButton } from "./post-task-button"
+import { addTask } from "@/app/actions/add-task-action"
 
 export default function TaskComposer() {
 
   const formRef = useRef<HTMLFormElement>(null)
 
+  const handleSubmit = async (formData: FormData) => {
+    await addTask(formData)
+    formRef.current?.reset() // Reset the form after submission
+  }
+
   return (
     <form ref={formRef}
-      action={async (formData) => {
-        await addTask(formData)
-        formRef.current?.reset() // Reset the form after submission
-      }}
+      action={handleSubmit}
       className='flex flex-row p-3 border-b border-white/20'
     >
-
       <div className='flex flex-1 flex-col gap-y-4'>
         <textarea
           name='title'
