@@ -22,7 +22,7 @@ export default function EditTaskModal({ task, onClose }: { task: any, onClose: (
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
-      <div className="bg-gray-800 text-white p-6 rounded-lg w-96">
+      <div className="bg-[#2A3C4F] text-white p-6 rounded-lg w-96">
         <h2 className="text-xl font-bold mb-4">Editar Tarea</h2>
         <form onSubmit={handleSubmit} className="flex flex-col gap-4">
           <div>

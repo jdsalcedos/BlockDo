@@ -9,7 +9,7 @@ export async function editTask(formData: FormData, task_id: string) {
 
   const content = formData.get('content')
   const title = formData.get('title')
-  const end_at = formData.get('end_at')
+  const end_at = formData.get('end_at') || null;
 
   const supabase = await createClient()
 

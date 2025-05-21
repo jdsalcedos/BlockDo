@@ -9,3 +9,10 @@ export const SignOutIcon = () => (
     <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M20 12H8m12 0-4 4m4-4-4-4M9 4H7a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h2" />
   </svg>
 )
+
+export const BlockdoIcon = () => (
+  <svg className="w-16 h-16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="24" height="24" rx="4" fill="#CBEA1D" />
+    <text x="6" y="18" fontFamily="Arial, sans-serif" fontSize="18" fontWeight="bold" fill="white">B</text>
+  </svg>
+)

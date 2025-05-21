@@ -17,27 +17,27 @@ export default function TaskComposer() {
   return (
     <form ref={formRef}
       action={handleSubmit}
-      className='flex flex-row p-3 border-b border-white/20'
+      className='flex flex-row p-3 border-b border-white/20 '
     >
-      <div className='flex flex-1 flex-col gap-y-4'>
+      <div className='flex flex-1 flex-col gap-4 bg-[#2A3C4F] p-6 rounded-2xl'>
         <textarea
           name='title'
           rows={1}
-          className="w-full text-2xl bg-black placeholder-gray-500 p-2"
+          className="w-full text-2xl bg-black placeholder-gray-500 p-2 rounded-xl"
           placeholder="Titulo"
         ></textarea>
         <textarea
           name='content'
           rows={4}
-          className="w-full text-xl bg-black placeholder-gray-500 p-2"
+          className="w-full text-xl bg-black placeholder-gray-500 p-2 rounded-xl"
           placeholder="Que esta pasando?"
         ></textarea>
-        <div>
-          <p className="pt-1.5 text-gray-200">Fecha limite (opcional)</p>
+        <div className="bg-[#abbfd5] rounded-xl p-2">
+          <p className="pt-1.5 text-gray-200 ">Fecha limite (opcional)</p>
           <input
             type="date"
             name='end_at'
-            className="p-5 w-full "
+            className="p-5 w-full bg-cyan-900"
           />
         </div>
         <PostTaskButton />
