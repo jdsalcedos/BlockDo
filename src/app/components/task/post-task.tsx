@@ -23,13 +23,13 @@ export default function TaskComposer() {
         <textarea
           name='title'
           rows={1}
-          className="w-full text-2xl bg-black placeholder-gray-500 p-2 rounded-xl"
+          className="w-full text-2xl bg-black placeholder-gray-500 p-2 rounded-xl text-white"
           placeholder="Titulo"
         ></textarea>
         <textarea
           name='content'
           rows={4}
-          className="w-full text-xl bg-black placeholder-gray-500 p-2 rounded-xl"
+          className="w-full text-xl bg-black placeholder-gray-500 p-2 rounded-xl text-white"
           placeholder="Que esta pasando?"
         ></textarea>
         <div className="bg-[#abbfd5] rounded-xl p-2">
