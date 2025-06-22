@@ -1,5 +1,4 @@
 import { redirect } from "next/navigation";
-import { AuthSignInButtonServer } from "@/app/components/auth/auth-button-server";
 import { createClient } from "@/app/utils/supabase/server";
 import TaskList from "../components/task/task-list";
 import TaskComposer from "../components/task/post-task";
