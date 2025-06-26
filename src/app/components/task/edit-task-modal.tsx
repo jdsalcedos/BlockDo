@@ -2,8 +2,9 @@
 
 import { useState } from "react";
 import { editTask } from "@/app/actions/edit-task-action";
+import { Task } from "@/app/types/task";
 
-export default function EditTaskModal({ task, onClose }: { task: any, onClose: () => void }) {
+export default function EditTaskModal({ task, onClose }: { task: Task, onClose: () => void }) {
   const [title, setTitle] = useState(task.title || "");
   const [content, setContent] = useState(task.content || "");
   const [endAt, setEndAt] = useState(task.end_at || "");

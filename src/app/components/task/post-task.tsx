@@ -23,13 +23,13 @@ export default function TaskComposer() {
         <textarea
           name='title'
           rows={1}
-          className="w-full text-sm bg-gray-700 placeholder-gray-300 p-2 rounded-xl h-12 resize-none"
+          className="w-full text-sm bg-gray-700 placeholder-gray-300 p-2 rounded-xl h-12 resize-none focus:ring-2 focus:outline-none focus:ring-blue-500"
           placeholder="Titulo"
         ></textarea>
         <textarea
           name='content'
           rows={4}
-          className="w-full text-sm bg-gray-700 placeholder-gray-300 p-2 rounded-xl resize-none "
+          className="w-full text-sm bg-gray-700 placeholder-gray-300 p-2 rounded-xl resize-none focus:ring-2 focus:outline-none focus:ring-blue-500"
           placeholder="Que esta pasando?"
         ></textarea>
         <div className="bg-gray-700 rounded-xl p-2 text-sm">
@@ -37,7 +37,7 @@ export default function TaskComposer() {
           <input
             type="date"
             name='end_at'
-            className="p-5 w-full text-gray-300"
+            className="my-1.5 p-4 w-full text-gray-300 rounded-xl focus:ring-2 focus:outline-none focus:ring-blue-500"
           />
         </div>
         <PostTaskButton />
